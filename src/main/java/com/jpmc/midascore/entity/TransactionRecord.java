@@ -22,6 +22,9 @@ public class TransactionRecord {
     private BigDecimal amount;
     private LocalDateTime timestamp;
 
+    @Column(nullable = false)
+    private BigDecimal incentiveAmount;
+
     // Getters and setters
     public LocalDateTime getTimestamp() {
         return timestamp;
@@ -55,6 +58,14 @@ public class TransactionRecord {
 
     public void setRecipient(UserRecord recipient) {
         this.recipient = recipient;
+    }
+
+    public BigDecimal getIncentiveAmount() {
+        return incentiveAmount;
+    }
+
+    public void setIncentiveAmount(BigDecimal incentiveAmount) {
+        this.incentiveAmount = incentiveAmount;
     }
 
     // Add getters, setters, and constructors
